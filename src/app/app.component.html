@@ -1,20 +1,4 @@
-<div>
-    <button class="btn btn-primary" (click)="AllUsers()">Show All Users</button>
-</div>
+<app-header></app-header>
 
-<hr>
-
-<div class="list-group-active" align="center">
-    <a href="https://github.com/{{name.login}}" class="list-group-item" *ngFor="let name of names" style="width: 50%"
-       align="left"><img
-            src="https://avatars0.githubusercontent.com/u/{{name.id}}?v=4" height="100px"> {{name.login}} </a>
-</div>
-
-
-<nav aria-label align="center">
-    <ul class="pager">
-        <a href="/{{page-1}}">Previous</a>
-        <a href="/{{page+1}}">Next</a>
-    </ul>
-</nav>
+<router-outlet></router-outlet>
 
