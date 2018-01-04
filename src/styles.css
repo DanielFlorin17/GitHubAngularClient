@@ -1,8 +1,13 @@
 body {
     font-size: 15px;
+    background-color: #f2f2f2;
+    font-family: "Georgia";
 }
 
-/*div.list-group-active {*/
-    /*margin-top: 100px;*/
-/*}*/
+.font-italic {
+    font-style: italic;
+}
 
+.font-family {
+    font-size: 18px;
+}

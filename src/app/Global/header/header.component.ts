@@ -12,4 +12,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
+  github() {
+      window.open("https://www.github.com", "_blank");
+  }
 }

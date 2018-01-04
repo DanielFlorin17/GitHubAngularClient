@@ -1,23 +1,30 @@
 <div class="container-fluid">
     <div class="row search-bar">
-        <div class="col-lg-4 col-lg-offset-6">
-            <div class="input-group">
-                <input type="text" class="form-control" placeholder="Search for...">
-                <span class="input-group-btn">
-        <button class="btn btn-default" type="button">Go!</button>
-      </span>
-            </div>
+        <div class="col-lg-6 col-lg-offset-2">
+
+                <div class="input-group">
+                    <input type="text" class="form-control font-italic" [(ngModel)]="filteredName"
+                           placeholder="Use for Local Search" style="background-color: #f8f8f8">
+                </div>
         </div>
     </div>
+<!-- TO DO: GLOBAL SEARCH
+-- <input type="text" class="form-control font-italic" [(ngModel)]="filteredName"-->
+<!--placeholder="Use for Global Search" style="background-color: #f8f8f8">-->
 
     <div class="row">
-        <div class="list-group-active col-lg-8 col-lg-offset-2">
-            <a href="https://github.com/{{name.login}}" class="list-group-item" *ngFor="let name of names"
+        <div class="list-group-active col-lg-8 col-lg-offset-2 font-family">
+            <a
+                    class="list-group-item"
+                    *ngFor="let name of names | filter:filteredName:propName">
+                <i class="fa fa-star-o" (click)="addToFavorite()" style="cursor: pointer;" aria-hidden="true"></i>
+                <a href="https://github.com/{{name.login}}"><img
+                        src="https://avatars0.githubusercontent.com/u/{{name.id}}?v=4" height="40px"></a> {{name.login}}
+            </a>
 
-               align="left"><img
-                    src="https://avatars0.githubusercontent.com/u/{{name.id}}?v=4" height="50px"> {{name.login}} </a>
         </div>
     </div>
+
 
     <nav aria-label align="center">
         <ul class="pager">
@@ -26,3 +33,4 @@
         </ul>
     </nav>
 </div>
+

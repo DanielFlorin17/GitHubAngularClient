@@ -1,6 +1,4 @@
 import {Component} from '@angular/core';
-import {UsersService} from './Global/services/users.service';
-import {Response} from '@angular/http';
 
 @Component({
     selector: 'app-root',
@@ -8,6 +6,7 @@ import {Response} from '@angular/http';
     styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
 
 }
 
